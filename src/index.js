@@ -1,3 +1,5 @@
-export default class {
-  
+import Web from './web'
+
+export {
+  Web
 }
