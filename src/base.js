@@ -1,7 +1,10 @@
 export default class Base {
-  constructor (options) {
+  constructor ({
+    appId,
+    secret
+  }) {
 
+    this._appId = appId
+    this._secret = secret
   }
-
-
 }

@@ -8,26 +8,16 @@ const template = () => {
   return
 }
 
-
 // { "access_token":"ACCESS_TOKEN",
 //  "expires_in":7200,
 //  "refresh_token":"REFRESH_TOKEN",
 //  "openid":"OPENID",
 //  "scope":"SCOPE" }
 
-
 import axios from 'axios'
+import Base from './base'
 
-
-export class Web {
-  constructor ({
-    appId,
-    secret
-  }) {
-
-    this._appId = appId
-    this._secret = secret
-  }
+export default class Web extends Base {
 
   baseAuthUrl (redirect_uri, state = 'snsapi_base') {
     return this._getAuthUrl(redirect_uri, '', state)

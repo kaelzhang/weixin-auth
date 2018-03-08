@@ -1,6 +1,6 @@
 {
   "name": "weixin-auth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "weixin-auth",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -58,7 +58,6 @@
     "rollup-plugin-node-resolve": "^3.0.0"
   },
   "dependencies": {
-    "axios": "^0.17.1",
-    "babel-runtime": "^6.23.0"
+    "axios": "^0.17.1"
   }
 }
