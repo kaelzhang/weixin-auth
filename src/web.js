@@ -18,7 +18,6 @@ import axios from 'axios'
 import Base from './base'
 
 export default class Web extends Base {
-
   baseAuthUrl (redirect_uri, state = 'snsapi_base') {
     return this._getAuthUrl(redirect_uri, '', state)
   }
