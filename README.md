@@ -15,7 +15,7 @@
 
 # weixin-auth
 
-<!-- description -->
+Wechat Authorization
 
 ## Install
 
@@ -26,7 +26,33 @@ $ npm install weixin-auth
 ## Usage
 
 ```js
-import weixin_auth from 'weixin-auth'
+import {WechatMP, mock} from 'weixin-auth'
+
+const mp = new WechatMP({
+  appId: '<wechat mini-program appid>',
+  secret: '<wechat mini-program secret>'
+})
+
+await mp.auth(code)
+// {
+//   openid: ...,
+//   unionid: ...,
+//   session_key: ...
+// }
+
+// We can mock the result for debugging purpose
+mock({
+  openid: 'a',
+  unionid: 'b',
+  session_key: 'c'
+})
+
+await mp.auth(code)
+// {
+//   openid: 'a',
+//   unionid: 'b',
+//   session_key: 'c'
+// }
 ```
 
 ## License

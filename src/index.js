@@ -1,9 +1,9 @@
 import Web from './web'
-import Weapp from './weapp'
+import WechatMP from './wechatmp'
 import {mock} from './base'
 
 export {
   Web,
-  Weapp,
+  WechatMP,
   mock
 }

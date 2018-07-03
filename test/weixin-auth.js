@@ -1,8 +1,8 @@
 import test from 'ava'
-import {mock, Weapp} from '../src'
+import {mock, WechatMP} from '../src'
 
 test('mock', t => {
-  const weapp = new Weapp({
+  const weapp = new WechatMP({
     appId: 'a',
     secret: 'b'
   })
