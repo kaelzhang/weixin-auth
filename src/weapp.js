@@ -1,5 +1,5 @@
 import axios from 'axios'
-import Base from './base'
+import Base, {mock} from './base'
 
 export default class WeApp extends Base {
   _sessionUrl (code) {
@@ -12,6 +12,6 @@ export default class WeApp extends Base {
   }
 
   auth (code) {
-    return this._code2Session(code)
+    return mock.mocked() || this._code2Session(code)
   }
 }

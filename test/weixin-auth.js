@@ -1,6 +1,19 @@
 import test from 'ava'
-import weixin_auth from '../src'
+import {mock, Weapp} from '../src'
 
-test('description', t => {
-  t.is(true, true)
+test('mock', t => {
+  const weapp = new Weapp({
+    appId: 'a',
+    secret: 'b'
+  })
+
+  const mocked = {
+    unionid: 'a',
+    session_key: 'b',
+    openid: 'c'
+  }
+
+  mock(mocked)
+
+  t.deepEqual(weapp.auth('code'), mocked)
 })
